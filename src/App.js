@@ -98,7 +98,7 @@ function App() {
           <br></br><br></br><br></br><br></br><br></br>
           <br></br><br></br><br></br><br></br><br></br>
           <br></br><br></br><br></br><br></br><br></br>
-          hola :D
+          hi :D
           <br></br><br></br><br></br><br></br><br></br>
         </div>
 
