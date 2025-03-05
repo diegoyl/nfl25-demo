@@ -1,0 +1,276 @@
+.reviewRowContainer {
+    /* outline: yellow 2px dashed; */
+    width: 86%;
+    margin: 1.5em auto;
+    /* background-color: var(--cPurp); */
+    color: var(--cWhite);
+    height: auto;
+    max-width: 500px;
+
+}
+.reviewColumn {
+    display: inline-block;
+    width: 48%;
+    height: 100%;
+    line-height: 1.5em;
+    padding: 0 1%;
+    
+}
+.noPickColor {
+    background-color: var(--cPurp);
+}
+.fullCol {
+    width: 98%;
+    border-radius: var(--revCorner) var(--revCorner) 0 0;
+}
+.reviewColumn p {
+    /* outline: yellow .1px dashed; */
+    /* background-color: antiquewhite; */
+    display: inline-block;
+    /* padding: .2em 0; */
+    margin: 0;
+    font-size: 1em;
+    white-space: nowrap;
+    line-height: 2em;
+    height: 2em;
+    vertical-align: bottom;
+    
+}
+.colName {
+    width: 76%;
+    text-align: left;
+    font-family: MainfontVariable;
+    font-stretch: 80%;
+    font-weight: 500;
+    letter-spacing: -.03em;
+    overflow-x: hidden;
+
+}
+.colPts {
+    width: 20%;
+    text-align: right;
+    font-family: MainfontVariable;
+    font-stretch: 85%;
+    font-weight: 500;
+    direction: rtl;
+    overflow-x: visible;
+}
+.reviewColumn .topText {
+    width: auto;
+    padding: 0 .6em;
+    font-family: MainfontVariable;
+    font-stretch: 110%;
+    font-weight: 900;
+    letter-spacing: 0;
+    direction: ltr;
+}
+.reviewColumn .botText {
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+}
+.botCol {
+    background-color: var(--cPurpField);
+    font-size: .9em;
+}
+.botL {
+    border-radius: 0 0 0 var(--revCorner);
+}
+.botR {
+    border-radius: 0 0 var(--revCorner) 0;
+    border-left: var(--cPurp) solid 1px;
+    margin-left: -1px;
+}
+.noSelection {
+    color: red;
+    text-shadow: 0px 0px 7px rgb(242, 67, 255);
+    font-weight: 900;
+    color: rgb(255, 0, 132);
+}
+
+
+
+/* // VIEW PICKS */
+.viewContainer {
+    background-color: var(--cPurp);
+    z-index: 1222;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    margin: 0;
+  
+    overflow: scroll;
+    text-align: center;
+  
+    font-family: Mainfont;
+    transition: top 1s ease-out;
+}
+.dropdown .viewDropButton {
+    background-color: var(--cPurpField);
+    color: white;
+    /* width: 30%; */
+    margin-top: 4vh;
+    margin-right: 1.5em;
+    white-space: nowrap;
+}
+.viewHomeButton {
+    /* width: 5em; */
+    position: fixed;
+    top: 1.02em;
+    left: 1em;
+    font-size: 2em;
+    z-index: 5000;
+    padding: .06em .5em;
+    background-color: var(--cPurpField);
+    color: var(--cPurpHighlight);
+    font-weight: 900;
+    border-radius: 8px;
+    z-index: 150;
+
+}
+.dropdown .viewHomeButton {
+    /* width: 2em; */
+    font-size: .9em;
+}
+.viewContainer .dropdownViewPicks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: 0;
+    /* width: 100%; */
+    background: linear-gradient(180deg, rgba(45,11,53,1) 0%, rgba(45,11,53,1) 75%, rgba(45,11,53,0) 100%);
+    height: 7em;
+    width: 100%;
+    max-width: 100%;
+}
+
+.rrcView {
+    /* background-color: var(--cPurpField); */
+    /* background-color: red; */
+    margin: .8em auto;
+    outline: rgba(0, 0, 0, 0.3) 2px solid;
+    border-radius: var(--revCorner);
+}
+.rrcView .fullCol {
+    /* background-color: var(--cPurpField);
+    border-bottom: var(--cPurp) 1px solid; */
+
+}
+
+.corP {
+    color: rgb(37, 255, 153);
+    text-shadow: 0px 0px 6px rgba(37, 255, 153,.5);  
+}
+.incorP {
+    color: var(--cRed);
+    text-shadow: 0px 0px 6px rgba(255, 37, 81, 0.8);  
+    /* text-decoration: line-through; */
+}
+.roundTitle {
+    color: var(--cPurpHighlight);
+    font-weight: bold;
+    font-size: .8em;
+    margin-top: 4em;
+    font-family: Monofont;
+}
+.firstRT {
+    margin-top: 10em;
+}
+.viewContainer .dropdown {
+    text-align: right;
+}
+
+.dropdownViewPicks li {
+    z-index: 152;
+}
+.shadowDiv {
+    box-shadow: 0px 10em 2000em 230px var(--cPurp);   
+    z-index: 151;
+    height: 0;
+
+
+}
+
+/* CURRENT PICKS */
+
+.curPicksContainer {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5em;
+
+}
+.curPicksContainer .reviewRowContainer{
+    margin: 0;
+    width: 100%;
+
+}
+.curRT {
+    margin:0;
+    margin-top: 1em;
+    margin-bottom: -.5em;
+
+}
+.curPicksRow {
+    display: block;
+    width: 100%;
+    height: 3.8em;
+    margin: .8em auto;
+    max-width: 420px;
+    /* background-color: yellow; */
+}
+.curPicksCol {
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+
+}
+.cpLeft {
+    width: 11%; 
+    /* line-height: 3.8em; */
+    font-size: 1.3em;
+    line-height: 1.6em;
+    /* background-color: red; */
+}
+
+
+
+.cpRight {
+    width: 78%;
+    margin-right: 11%;
+    /* background-color: aqua; */
+}
+
+
+.curMatchup {
+    width: 90%;
+    margin: 0 auto;
+    /* outline: var(--cPurpHighlight) 2px solid; */
+    box-shadow: 0px 0px .8em rgba(242, 67, 255, .5);
+
+    font-family: MainfontVariable;
+    font-style: 105%;
+    font-weight: 900!important;
+    font-size: 1.1em;
+    border-radius: var(--revCorner);
+    margin-bottom: 2.5em;
+    max-width: 400px;
+}
+.matchupHalf {
+    width: 50%;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+.matchupHalf p {
+    margin: .5em 0;
+}
+.matchupLeft {
+    border-radius: var(--revCorner) 0 0 var(--revCorner);
+}
+.matchupRight {
+    border-radius: 0 var(--revCorner) var(--revCorner) 0;
+}

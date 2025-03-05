@@ -1,0 +1,74 @@
+#loadingContainer {
+    background-color: var(--cPurp2);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    animation: fade .8s infinite alternate;
+
+    transition: opacity .5s ease-in-out;
+}
+
+.loadingInactive {
+    opacity: 0;
+    pointer-events: none;
+}
+.loadingActive {
+    pointer-events: all;
+    opacity: 1;
+}
+
+.bounceText{
+    font-size: 2em;
+    margin-top: 33vh;
+    animation: bounce 1s infinite alternate
+}
+
+
+@keyframes bounce {
+    100% {
+        translate: 0 20px;
+    }
+}
+
+/* @keyframes fade {
+    100% {
+        opacity: .7;
+    }
+} */
+#postSubmitContainer {
+    background-color: var(--cPurp2);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 333;
+
+    transition: opacity .5s ease-in-out;
+}
+#postSubmitContainer p{
+    padding-top: 23vh;
+    font-size: 1.5em;
+    color: var(--cPurpHighlight);
+    font-family: Monofont;
+    font-weight: bold;
+    width: 70%;
+    margin: 0 auto;
+}
+
+#postSubmitContainer button {
+    height: 2.5em;
+    width: 70%;
+    margin: 2.5%;
+    font-size: 2em;
+    /* line-height: 1em; */
+    font-family: Monofont;
+    font-weight: bold;
+
+    background-color: var(--cPurpHighlight);
+    color: var(--cPurp2);
+    border-radius: 20px;
+}

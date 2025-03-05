@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/nfl2025/static/css/main.3f20e72c.css",
+    "main.js": "/nfl2025/static/js/main.e98c609b.js",
+    "static/media/MLexample.png": "/nfl2025/static/media/MLexample.2e43aaf34c6780a62cdc.png",
+    "static/media/TDexample.png": "/nfl2025/static/media/TDexample.8a6de417d04423f94f2b.png",
+    "static/media/MartianMono-VariableFont_wdth,wght.ttf": "/nfl2025/static/media/MartianMono-VariableFont_wdth,wght.9dc9a40944d5007bc4d9.ttf",
+    "static/media/MIN.jpg": "/nfl2025/static/media/MIN.0cb50ce5fb0d3d90104c.jpg",
+    "static/media/FragmentMono-Italic.ttf": "/nfl2025/static/media/FragmentMono-Italic.dd408ce5edc9f47abccc.ttf",
+    "static/media/TB.jpg": "/nfl2025/static/media/TB.f7a9679b4e5455b90179.jpg",
+    "static/media/FragmentMono-Regular.ttf": "/nfl2025/static/media/FragmentMono-Regular.7169c93798423421b046.ttf",
+    "static/media/BAL.jpg": "/nfl2025/static/media/BAL.ee0668f152a1664fad8a.jpg",
+    "static/media/DET.jpg": "/nfl2025/static/media/DET.fcc492c446b701fe8028.jpg",
+    "static/media/DEN.jpg": "/nfl2025/static/media/DEN.dbdfbb1363d3148907e0.jpg",
+    "static/media/BUF.jpg": "/nfl2025/static/media/BUF.55b79e86a5cf21fc6c1c.jpg",
+    "static/media/PHI.jpg": "/nfl2025/static/media/PHI.0411298013cfbaabf102.jpg",
+    "static/media/LAC.jpg": "/nfl2025/static/media/LAC.a4af8079b2d593dc615e.jpg",
+    "static/media/LAR.jpg": "/nfl2025/static/media/LAR.1ccfbf23e2e181dab2e6.jpg",
+    "static/media/KC.jpg": "/nfl2025/static/media/KC.0bc206410ee94122461f.jpg",
+    "static/media/HOU.jpg": "/nfl2025/static/media/HOU.f9dc04c1421108829c63.jpg",
+    "static/media/WAS.jpg": "/nfl2025/static/media/WAS.d77590f67fab273cad20.jpg",
+    "static/media/PIT.jpg": "/nfl2025/static/media/PIT.8f6d9dd5d34cc3028e55.jpg",
+    "static/media/GB.jpg": "/nfl2025/static/media/GB.c3d1dbb79bf25133a0ac.jpg",
+    "index.html": "/nfl2025/index.html",
+    "main.3f20e72c.css.map": "/nfl2025/static/css/main.3f20e72c.css.map",
+    "main.e98c609b.js.map": "/nfl2025/static/js/main.e98c609b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3f20e72c.css",
+    "static/js/main.e98c609b.js"
+  ]
+}

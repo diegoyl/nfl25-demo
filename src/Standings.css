@@ -1,0 +1,56 @@
+.standingsTableContainer {
+    /* outline: red 2px dashed; */
+    width: 80%;
+    margin: 0 auto;
+    max-width: 400px;
+}
+.sRow {
+    /* outline: yellow 1px dashed; */
+    width: 100%;
+    margin: 0;
+
+}
+.sCol {
+    display: inline-block;
+    /* outline: rgb(0, 255, 17) 1px dashed; */
+    margin: 0;
+    height: 100%;
+    white-space: nowrap;
+    overflow-x: hidden;
+    font-family: Monofont;
+    font-size: 1.3em;
+    padding: .2em 0;
+    margin: -.1em 0;
+    letter-spacing: -.02em;
+    background-color: var(--cPurpField);
+    color: var(--cWhite);
+
+}
+.sColName {width: 48%;}
+.sColPts {width: 20%;}
+.sColWin , .sColTd {width: 15%;}
+
+.sColName {
+    text-align: left;   
+    font-family: MainfontVariable;
+    font-stretch: 110%;
+    padding-left: 2%;
+}
+.sColPts {
+    /* text-align: left;    */
+    font-family: MainfontVariable;
+    font-stretch: 110%;
+    font-weight: 900;
+
+}
+
+#sRowHeader p{
+    background-color: rgba(0,0,0,0);
+    font-family: Monofont;
+    font-weight: bold;
+    color: var(--cPurpHighlight);
+    font-size: 1em;
+}
+#sRow1 .sCol{
+    background-color: var(--cPurpHighlight);
+}

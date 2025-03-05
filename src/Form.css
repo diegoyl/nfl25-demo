@@ -1,0 +1,792 @@
+:root {
+    --mlCorner: .5em;
+    --colWidth: 48%;
+    --revCorner: 7px;
+}
+
+.formContainer {
+  background-color: var(--cPurp);
+  z-index: 10;
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  margin: 0;
+
+  overflow: scroll;
+  text-align: center;
+
+  font-family: Mainfont;
+  transition: top 1s ease-out;
+}
+.overlayActive {
+    top: 0;
+}
+
+.flash {
+    z-index: 11;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+}
+.flashActive {
+    z-index: 11;
+    opacity: 0;
+    animation: flash .9s;
+    animation-iteration-count: 1;
+}
+.flashActive2 {
+    z-index: 11;
+    opacity: 0;
+    animation: flash2 .6s;
+    animation-iteration-count: 1;
+}
+#flash2 {
+    z-index: 911;
+    mix-blend-mode:normal;
+}
+
+/* .formContainer div {
+    text-align: center;
+} */
+
+.navButtons, .curUser{
+    z-index: 20;
+}
+.navButtons {
+    background-color: var(--cPurp);
+    background: linear-gradient(0deg, rgba(45,11,53,1) 0%, rgba(45,11,53,1) 65%, rgba(45,11,53,0) 100%);
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 1.5em;
+
+}
+.navButtonHalf {
+    /* outline: yellow dashed 1px; */
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    vertical-align: top;
+}
+.navButtons button {
+    height: 2em;
+    width: 92%;
+    margin: 2.5%;
+    font-size: 1.3em;
+    /* line-height: 1em; */
+    font-family: Monofont;
+    font-weight: bold;
+
+    background-color: var(--cPurp2);
+    /* outline: var(--cPurpHighlight) 4px solid; */
+    color: var(--cPurpHighlight);
+    border-radius: 6px;
+}
+.navButtons #leftNav {
+    /* margin-right: 0%; */
+    text-align: right;
+}
+.navButtons #rightNav {
+    text-align: left;
+    /* margin-left: 0%; */
+}
+.navButtons #finishButton {
+    /* color: var(--cWhite); */
+    /* background-color:    var(--cOffWhite); */
+}
+
+.gameContainer {
+    z-index: 12;
+    position: relative;
+    /* outline: red dashed 1px; */
+    /* background-color: antiquewhite; */
+
+    margin: 6em auto;
+    width: 92%;
+    max-width: 800px;
+    display: block;
+
+}
+.instruction {
+    /* outline: yellow 1px dashed; */
+    font-family: Monofont;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: var(--cPurpHighlight);
+    width: 80%;
+    margin: .5em auto;
+}
+
+/* ML PICK ////////////////////////////////////////*/
+#mlContainer {
+    display: block;
+    /* outline: yellow 1px dashed; */
+    /* background-color: aquamarine; */
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+.mlButton {
+    background-color: var(--cPurpField);
+    color: var(--cOffWhite);
+
+    position: relative;
+    width: var(--colWidth);
+    height: auto;
+    border-radius: var(--mlCorner);
+}
+#homeML {margin-right: calc(50% - var(--colWidth));}
+#awayML {margin-left: calc(50% - var(--colWidth));}
+
+
+.mlLogoContainer {
+
+
+    /* background-color: red; */
+    width: 96%;
+    height: 9em;
+    margin: 2%;
+    margin-bottom: 0;
+    /* background-image: url("./img/logo/PHI.png"); */
+    background-size: cover;
+    background-position: center;
+    vertical-align: top;
+    /* border-radius: calc(var(--mlCorner)*.8); */
+}
+.mlLogoImg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: calc(var(--mlCorner)*.72);
+
+}
+.mlLogoContainer div {
+    display: block;
+}
+.mlTextContainer {
+    width: 88%;
+    margin: 0 6%;
+    height: 2.1em;
+    line-height: 2em;
+    font-size: 1.06em;
+    vertical-align: middle;
+    font-family: MainfontVariable;
+    font-stretch: 100%;
+    font-weight: 900;
+    /* border: red 1px dashed; */
+}
+/* .mlTextContainer div {
+    height: 25%;
+} */
+
+.mlText{
+    display: inline-block;
+    /* outline: green .5px dashed; */
+    height: 100%;
+    width: 50%;
+}
+.mlText p {
+    padding: 0;
+    margin: 0;
+}
+.mlName {
+    text-align: left;
+}
+.mlPts {
+    text-align: right;
+    direction: rtl;
+}
+
+.helpButton {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 2em;
+    width: 2em;
+    background-color: rgba(0, 0,0,0);
+    color: var(--cPurp2);
+    font-weight: bold;
+    font-size: 1em;
+}
+.helpButton {
+    pointer-events: all;
+}
+
+
+.helpHelpButton {
+    height: 2em;
+    width: 2em;
+    background-color: var(--cPurpHighlight);
+    font-size: 2em;
+    border-radius: 0 0 0 6px ;
+}
+.helpHelpButtonBottom {
+    position: relative;
+    /* display: block; */
+    height: 2em;
+    width: auto;
+    background-color: var(--cPurpHighlight);
+    font-size: 2em;
+    border-radius: 6px;
+    padding: 0 1em;
+}
+
+
+/* TD SCORERS ////////////////////////////////////////*/
+#tdContainer {
+    display: block;
+    /* outline: yellow 1px dashed; */
+    /* background-color: aquamarine; */
+    margin: 0 auto;
+    width: 100%;
+
+}
+
+.tdHalf {
+
+    /* outline: purple 1px dashed; */
+    /* background-color: rgba(67, 67, 255, 0.346); */
+    width: var(--colWidth);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+}
+#tdHome {margin-right: calc(50% - var(--colWidth));}
+#tdAway {margin-left: calc(50% - var(--colWidth));}
+
+.tdOption {
+    display: block;
+    width: 100%;
+    height: 2.2em;
+    background-color: var(--cPurpField);
+    color: var(--cWhite);
+    /* outline: #2d0b3583 solid .1px; */
+    margin: .05em 0;
+    border-radius: 3px;
+}
+.tdOption p {
+    display: inline-block;
+    height: 100%;
+    /* outline: red 1px dashed; */
+    /* background-color: rgba(67, 255, 149, 0.346); */
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+/* .tdImgCont {
+    width: 18%;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    display: inline-block;
+    height: 100%;
+    background-color: aqua;
+} */
+.tdPos {
+    width: 12%;
+    font-size: .6em;
+    line-height: calc(2.2em / .6); /* linked to tdOption */
+    font-family: MainfontThin;
+    letter-spacing: -.05em;
+}
+.tdOption .tdName {
+    width: 65%;
+    font-size: 1em;
+    line-height: calc(2.2em / 1  ); /* linked to tdOption */
+    
+    font-family: MainfontVariable;
+    
+    font-stretch: 98%;
+    font-weight: 440;
+
+    text-align: left;
+    margin-left: 1%;
+    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif */
+    letter-spacing: -.05em;
+}
+.tdOption .tdPts {
+    width: 19.5%;
+    font-size: 1em;
+    font-family: MainfontVariable;
+    font-stretch: 100%;
+    font-weight: 460;
+    padding-right: 2.5%;
+
+    text-align: right;
+    overflow-x: visible;
+    direction: rtl;
+    
+    
+    line-height: calc(2.2em / 1  ); /* linked to tdOption */
+}
+
+.tdNotes {
+    font-family: Monofont;
+    color: var(--cOfferWhite);
+    margin-top: 3em;
+    font-size: .7em;
+}
+/* ACTIVE STUFF */
+.tdActive{
+    /* color: red; */
+    transition:  .4s ease-in-out;
+    outline: var(--cPurpHighlight) solid 4px;
+    border-radius: .1em;
+}
+
+.tdActive .tdPos{font-weight: 600; letter-spacing: -.05em;}
+.tdActive .tdName{font-weight: 800; letter-spacing: -.05em;}
+.tdActive .tdPts{font-weight: 800; letter-spacing: -.01em;}
+
+.mlActive {
+    color: white;
+    background-color: var(--cPurpHighlight);
+    transition: .4s ease-in-out;
+    outline: var(--cPurpHighlight) 4px solid;
+}
+
+
+
+#submitContainer {
+    z-index: 51;
+    background-color: var(--cPurpHighlight);
+    width: 100%;
+    min-height: 100em;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    /* background-color: yel    low; */
+    color: #00214f;
+    overflow: scroll;
+    text-align: center;
+    /* padding-top: 22vh;  */
+    transition: top 1s ease-in-out;   
+}
+
+.submitFormInactive {
+    top: 100vh;
+}
+.submitFormActive {
+    top: 0vh;
+}
+  
+#submitContainer button {
+    height: 3.5em;
+    width: 92%;
+    margin: 2.5%;
+    font-size: 1.3em;
+    /* line-height: 1em; */
+    font-family: Monofont;
+    font-weight: bold;
+
+    background-color: var(--cPurp2);
+    /* outline: var(--cPurpHighlight) 4px solid; */
+    color: var(--cPurpHighlight);
+    border-radius: 8px;
+}
+#submitContainer  #submitButton {
+    /* font-size: 3em; */
+    color: var(--cWhite);
+}
+#submitContainer  #returnButton {
+    /* height: 3em; */
+    /* width: 60%; */
+    color: var(--cPurp2);
+    border: var(--cPurp2) solid 3px;
+    background-color: rgba(0,0,0,0);
+}
+.navSubmit {
+    /* background-color: var(--cPurpHighlight); */
+    padding-top: 2.5em;
+    background: linear-gradient(0deg, rgba(192,65,225,1) 0%, rgba(192,65,225,1) 65%, rgba(192,65,225,0) 100%);
+    bottom:-10em;
+    transition: 1s ease-in-out;
+    opacity: 0;
+
+}
+.navSubmitActive {
+    bottom:0;
+    opacity: 1;
+}
+.reviewInstructions {
+    /* border: green 1px solid; */
+    margin-top: 23vh;
+    margin-bottom: 200vh;
+    overflow: scroll;
+    font-family: Monofont;
+    font-weight: bold;
+    letter-spacing: -.03em;
+    color: var(--cPurp);
+}
+
+
+
+
+  /* DropdownMenu.css */
+#userSelectOverlay {
+    z-index: 144;
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    height: 0;
+}
+.userSelectBackground {
+
+  background-color: var(--cPurp);
+  z-index: 144;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  margin: 0;
+  opacity: 1;
+  overflow: scroll;
+  pointer-events: none;
+  transition: opacity 1s .6s ease-out;
+}
+
+.helpInstruction {
+    font-family: Monofont;
+    font-size: 1em;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+.purpleQ {
+    color: var(--cPurpHighlight);
+    font-weight: bolder;
+}
+.dropdown {
+    z-index: 145;
+    margin-top: 8vh;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    max-width: 500px;
+    transition: opacity 1s .1s ease-in-out;
+
+}
+  
+.dropdown button {
+    /* height: 2em; */
+    /* width: 80%; */
+    padding: .5em 1em;
+
+    color: var(--cPurpHighlight);
+    font-size: 1.5em;
+
+    font-weight: bold;
+    margin-bottom: .1em;
+
+    background-color: rgba(0,0,0,0);
+    border-radius: 8px;
+}
+
+  
+.dropdown-menu {
+    z-index: 13;
+    text-align: center;
+
+    display: block;
+    position: absolute;
+    font-family: MainfontVariable;
+    font-weight: 900;
+    font-stretch: 105%;
+    font-size: 1.2em;
+    width:70%;
+    margin: 0 15%;
+    background-color: transparent;
+    z-index: 1;
+    padding: 0;
+}
+  
+.dropdown-menu li {
+    z-index: 13;
+    color: var(--cOffWhite);
+    padding: 7px 0;
+    cursor: pointer;
+    list-style-type: none;
+    /* outline: var(--cPurp2) 2px solid; */
+    font-family: 'Courier New', Courier, monospace;
+    
+    font-family: MainfontVariable;
+    font-weight: 900;
+    font-stretch: 112%;
+
+    background-color: var(--cPurpField);
+    margin: 8px 0;
+    border-radius: 6px;
+}
+.dShadow li {
+    box-shadow: 0px 5px 500px 0px rgba(185, 8, 255, 0.496);
+}
+
+.userDisapear {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+.curUser {
+    z-index: 100;
+    background-color: var(--cPurpHighlight);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    height: 2em;
+    line-height: 2em;
+    font-size: 2em;
+    padding: 0;
+    transition: 1s ease-in-out;
+    pointer-events: none;
+}
+.userDrop {
+    padding-top: 8vh;
+    color: white;
+    font-size: 2.6em;
+}
+
+
+
+/* TEAM COLORS */
+
+
+
+/* TEAM COLORS */
+.BAL {
+    background-color: #2e1a93;
+    color: #d0ab31;
+
+}
+.BUF {
+    background-color: #003091;
+    color: #d91b41;
+}
+.DEN {
+    background-color: #fa6018;
+    color: #00214f;
+}
+.DET {
+    background-color: #007fb8;
+    color: #bfc9cf;
+}
+.GB {
+    background-color: #FFB612;
+    color: #104b3b;
+}
+.HOU {
+    background-color: #002354;
+    color: #bd1a36;
+}
+.KC {
+    background-color: #ce112e;
+    color: #ffc445;
+}
+.LAC {
+    background-color: #1591d9;
+    color: #FFC20E;
+}
+.LAR {
+    background-color: #003fb3;
+    color: #ffd100;
+}
+.MIN {
+    background-color: #4f1d90;
+    color: #ffcc25;
+}
+.PHI {
+    background-color: #003a41;
+    color: #a2b5bb;
+}
+.PIT {
+    background-color: #0b0f12;
+    color: #FFB612;
+}
+.TB {
+    background-color: #252321;
+    color: #cf0e0d;
+}
+.WAS {
+    background-color: #5A1414;
+    color: #FFB612 ;
+}
+
+/* TEAM COLORS FOR FLASHING */
+.BALflash {
+    background-color: #562ec3;
+}
+.BUFflash {
+    background-color: #0049c7;
+    background-color: #d91b41;
+}
+.DENflash {
+    background-color: #ff6b26;
+}
+.DETflash {
+    background-color: #009bd4;
+}
+.GBflash {
+    background-color: #ffcd39;
+}
+.HOUflash {
+    background-color: #bd1a36;
+}
+.KCflash {
+    background-color: #E31837;
+    background-color: #ffd20b;
+}
+.LACflash {
+    background-color: #33adf8;
+}
+.LARflash {
+    background-color: #0052ea;
+}
+.MINflash {
+    background-color: #6f2ec3;
+}
+.PHIflash {
+    background-color: #005a64;
+}
+.PITflash {
+    background-color: #FFB612;
+}
+.TBflash {
+    background-color: #be1515;
+}
+.WASflash {
+    /* background-color: #8a1c1c; */
+    background-color: #FFB612;
+    
+}
+
+
+@keyframes flash {
+    20% {
+        opacity: 1;
+    }
+    35% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes flash2 {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: .7;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.plus{
+    font-size: .7em;
+    line-height: 2.9em;
+    letter-spacing: .1em;
+}
+
+
+.helpContainer {
+    background-color: var(--cPurp);
+    z-index: 105;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    margin: 0;
+    /* opacity: .0; */
+    /* pointer-events: none; */
+    padding-top: 4em;
+  
+    overflow: scroll;
+    text-align: center;
+  
+    font-family: Monofont;
+    letter-spacing: -.02em;
+    transition: top 1s ease-out;
+  }
+  .helpContainer p {
+    width: 85%;
+    margin: .4em auto;
+    font-size: .8em;
+    text-align: left;
+  }
+  .helpContainer .subtitle {
+    font-size: 1.5em;
+
+    font-family: MainfontVariable;
+    font-weight: 900;
+    font-stretch: 105%;
+
+    text-align: center;
+  }
+
+  #formback {
+    top: 9px;
+    left: 10px;
+    font-size: 1.2em;
+    padding: .6em .5em;
+  }
+
+
+@media (hover: hover) {
+    
+    .navButtons button:hover {
+        background-color: var(--cPurpHighlight);
+        color: var(--cWhite);
+        transition: .2s ease-in-out;
+    }
+    .navButtons #finishButton:hover {
+        background-color: var(--cPurpHighlight);
+        color: var(--cWhite);
+        transition: .2s ease-in-out;
+    }
+
+    .mlButton:hover {
+        color: var(--cPurpHighlight);
+        background-color: var(--cPurp2);
+        transition: .19s ease-in-out;
+        outline: var(--cPurpHighlight) 4px solid;
+    }
+    
+    .mlActive:hover {
+        color: white;
+        background-color: var(--cPurpHighlight);
+        transition: .4s ease-in-out;
+    }
+    .dropdown-menu li:hover {
+        background-color: var(--cPurpHighlight);
+        color: var(--cWhite);
+    }
+}
