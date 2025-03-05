@@ -1,5 +1,1 @@
-git config --global http.postBuffer 157286400
-
-
-
-git config --global http.postBuffer 157286400
+Demo version of NFL predictions contest app. Demo shows a mid-contest state so that it's not all blank.
